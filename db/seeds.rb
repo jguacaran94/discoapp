@@ -1,13 +1,21 @@
+# Artist
 Artist.create(name: "Metallica", description: "Metallica es una banda de thrash metal estadounidense que se origina en Los Ángeles, pero con base en San Francisco desde febrero de 1983.")
-
 Artist.create(name: "Megadeth", description: "Megadeth es una banda estadounidense de thrash metal, formada en Los Ángeles, California. Fue creada en 1983 por Dave Mustaine (vocalista y guitarrista), después de que fuera expulsado de Metallica, donde ocupaba el puesto de guitarrista principal.")
-
 Artist.create(name: "Slayer", description: "Slayer es una banda de thrash metal estadounidense fundada en 1981 por los guitarristas Kerry King y Jeff Hanneman en Huntington Park, California.")
-
 Artist.create(name: "Anthrax", description: "Anthrax es una banda estadounidense de thrash metal, formada en Nueva York en 1981, por el guitarrista Scott Ian y el bajista Dan Lilker.")
-
 Artist.create(name: "Rammstein", description: "Rammstein es una banda alemana de metal industrial formada en 1994 por los músicos Till Lindemann, Richard Z. Kruspe, Oliver Riedel, Paul Landers, Christian Lorenz y Christoph Schneider.")
-
 Artist.create(name: "Gojira", description: "Gojira es una banda Francesa de death metal y groove metal formada en 1996 en Bayona, Francia.")
 
-Lp.create(name: "Kill 'Em All", year: "1983", genre: "Thrash Metal")
+# LP
+Lp.create(name: "Kill 'Em All", year: "1983", genre: "Thrash Metal", artist_id: "1")
+Lp.create(name: "Ride The Lightning", year: "1984", genre: "Thrash Metal", artist_id: "1")
+Lp.create(name: "Killing Is My Business... And Business Is Good!", year: "1985", genre: "Thrash Metal", artist_id: "2")
+Lp.create(name: "Peace Sells... But Who's Buying?", year: "1985", genre: "Thrash Metal", artist_id: "2")
+Lp.create(name: "Show no Mercy", year: "1983", genre: "Thrash Metal", artist_id: "3")
+Lp.create(name: "Hell Awaits", year: "1983", genre: "Thrash Metal", artist_id: "3")
+Lp.create(name: "Fistful of Metal", year: "1984", genre: "Thrash Metal", artist_id: "4")
+Lp.create(name: "Spreading the Disease", year: "1985", genre: "Thrash Metal", artist_id: "4")
+Lp.create(name: "Herzeleid", year: "1995", genre: "Industrial Metal", artist_id: "5")
+Lp.create(name: "Sehnsucht", year: "1995", genre: "Industrial Metal", artist_id: "5")
+Lp.create(name: "Terra Incognita", year: "2001", genre: "Groove Metal", artist_id: "6")
+Lp.create(name: "The Link", year: "2003", genre: "Groove Metal", artist_id: "6")
