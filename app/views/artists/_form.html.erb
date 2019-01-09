@@ -1,0 +1,44 @@
+<table class="table table-hover table-bordered col-sm-12 content-center">
+	<thead><th colspan="3"><h4><%= action_name.capitalize%> Artist</h4></th></thead>
+	<tbody class="table-striped">
+
+		<% if artist.errors.any? %>
+			<div id="error_explanation">
+				<h2><%= pluralize(artist.errors.count, "error") %> prohibited this artist from being saved:</h2>
+
+				<ul>
+				<% artist.errors.full_messages.each do |message| %>
+					<li><%= message %></li>
+				<% end %>
+				</ul>
+			</div>
+		<% end %>
+
+			<tr>
+				<td>
+					<div class="form-group col-md-12">
+						<%= form.label :name %>
+						<%= form.text_field :name, class: "form-control" %>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<div class="form-group col-md-12">
+						<%= form.label :description %>
+						<%= form.text_area :description, class: "form-control" %>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<div class="form-group col-md-12 actions">
+						<%= form.submit "Save", class: "btn btn-primary" %>
+						<%= link_to 'Back', artists_path, class: "btn btn-secondary" %>
+					</div>
+				</td>
+			</tr>
+  </tbody>
+</table>
