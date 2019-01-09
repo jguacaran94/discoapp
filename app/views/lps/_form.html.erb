@@ -1,0 +1,61 @@
+<table class="table table-hover table-bordered col-sm-12 content-center">
+	<thead><th colspan="3"><h4><%= action_name.capitalize %> LP</h4></th></thead>
+	<tbody class="table-striped">
+
+		<% if lp.errors.any? %>
+			<div id="error_explanation">
+				<h2><%= pluralize(lp.errors.count, "error") %> prohibited this lp from being saved:</h2>
+
+				<ul>
+				<% lp.errors.full_messages.each do |message| %>
+					<li><%= message %></li>
+				<% end %>
+				</ul>
+			</div>
+		<% end %>
+
+		<tr>
+			<td>
+				<div class="form-group col-md-12 content-center">
+					<%= form.select(:artist_id, Artist.all.collect {|a| [ a.name, a.id ] }, {prompt: "-- Artist name --"}, id: "dropdown") %>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<div class="form-group col-md-12">
+					<%= form.label :name %>
+					<%= form.text_field :name, class: "form-control" %>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<div class="form-group col-md-12">
+					<%= form.label :year %>
+					<%= form.text_field :year, class: "form-control" %>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<div class="form-group col-md-12">
+					<%= form.label :genre %>
+					<%= form.text_field :genre, class: "form-control" %>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<div class="form-group actions col-md-12">
+					<%= form.submit "Save", class: "btn btn-primary" %>
+					<%= link_to 'Back', lps_path, class: "btn btn-secondary" %>
+				</div>
+			</td>
+		</tr>
+  </tbody>
+</table>

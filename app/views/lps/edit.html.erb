@@ -1,0 +1,5 @@
+<div class="row justify-content-center">
+	<%= form_with(model: @lp, local: true) do |form| %>
+		<%= render partial: 'form', locals: {lp: @lp, form: form} %>
+	<% end %>
+</div>
